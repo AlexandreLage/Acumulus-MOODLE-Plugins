@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<XMLDB PATH="mod/acumulus/db" VERSION="20160226" COMMENT="XMLDB file for Moodle mod/acumulus"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="../../../lib/xmldb/xmldb.xsd"
+>
+  <TABLES>
+    <TABLE NAME="acumulus" COMMENT="Alexandre Lage, 2016, amlage.cv@hotmail.com">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true" NEXT="name"/>
+        <FIELD NAME="name" TYPE="char" LENGTH="255" NOTNULL="true" SEQUENCE="false" PREVIOUS="id" NEXT="timeavailable"/>
+        <FIELD NAME="timeavailable" TYPE="number" LENGTH="11" NOTNULL="true" SEQUENCE="false" PREVIOUS="name" NEXT="timedue"/>
+        <FIELD NAME="timedue" TYPE="number" LENGTH="11" NOTNULL="true" SEQUENCE="false" PREVIOUS="timeavailable" NEXT="grade"/>
+        <FIELD NAME="grade" TYPE="int" LENGTH="4" NOTNULL="false" SEQUENCE="false" PREVIOUS="timedue" NEXT="course"/>
+        <FIELD NAME="course" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="false" PREVIOUS="grade" NEXT="intro"/>
+        <FIELD NAME="intro" TYPE="text" NOTNULL="true" SEQUENCE="false" PREVIOUS="course" NEXT="introformat"/>
+        <FIELD NAME="introformat" TYPE="int" LENGTH="4" NOTNULL="true" SEQUENCE="false" PREVIOUS="intro" NEXT="timemodified"/>
+        <FIELD NAME="timemodified" TYPE="number" LENGTH="10" NOTNULL="false" SEQUENCE="false" PREVIOUS="introformat"/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="id" TYPE="primary" FIELDS="id"/>
+      </KEYS>
+    </TABLE>
+  </TABLES>
+</XMLDB>

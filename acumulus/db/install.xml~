@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+  <XMLDB PATH="mod/acumulus/db" VERSION="20160208" COMMENT="XMLDB file for Moodle mod/acumulus">
+    <TABLES>
+      <TABLE NAME="acumulus" COMMENT="Default comment for acumulus, please edit me">
+        <FIELDS>
+          <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true" />
+        </FIELDS>
+        <KEYS>
+          <KEY NAME="primary" TYPE="primary" FIELDS="id" />
+        </KEYS>
+      </TABLE>
+    </TABLES>
+  </XMLDB>
